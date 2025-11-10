@@ -6,10 +6,11 @@ class Solution(object):
         :rtype: int
         """
         count = 0
-        while num1 > 0 and num2 > 0:
+        while num1 != 0 and num2 != 0:
             if num1 >= num2:
-                num1 -= num2
+                count += num1 // num2
+                num1 %= num2
             else:
-                num2 -= num1
-            count += 1
+                count += num2 // num1
+                num2 %= num1
         return count
