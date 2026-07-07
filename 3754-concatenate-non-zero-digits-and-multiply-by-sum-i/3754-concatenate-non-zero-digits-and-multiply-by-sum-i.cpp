@@ -1,0 +1,25 @@
+class Solution {
+public:
+    long long sumAndMultiply(int n) {
+        long long x = 0;
+        int sum = 0;
+
+        if (n == 0) return 0;
+
+        string s = to_string(n);
+
+        for (char c : s) {
+            if (c != '0') {
+                int d = c - '0';
+                x = x * 10 + d;
+                sum += d;
+            }
+        }
+
+        return x * sum;
+    }
+};
+
+// Synced seamlessly with LeetHub Pro
+// Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
+// Get it here: https://chromewebstore.google.com/detail/bcilpkkbokcopmabingnndookdogmbna
